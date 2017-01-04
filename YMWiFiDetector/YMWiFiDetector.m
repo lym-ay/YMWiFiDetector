@@ -50,7 +50,7 @@ static YMWiFiDetector* instance = nil;
 }
 
 - (void)wifiDetectorSearchFinished {
-    [self wifiDetectorSearchFinished];
+    [self.delegate wifiDetectorSearchFinished];
     
 }
 @end

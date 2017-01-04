@@ -52,9 +52,57 @@
 @property (nonatomic, strong) NSTimer *pingTimer;
 @property (nonatomic, assign) NSInteger timerCount;
 @property (nonatomic, copy) DLNSearchResultBlock searchResultBlock;
+
 @end
 
 @implementation DLNWiFiDetector
+
+static NSRunLoop *_wifiDetectorRunLoop;
+
+//自己定义一个循环，不要用主循环，否则定义的delegate无法执行。
+- (void)voiceWaveThreadEntryPoint:(id)__unused object
+{
+    @autoreleasepool {
+        [[NSThread currentThread] setName:@"com.olavoice.wifidetector"];
+        _wifiDetectorRunLoop = [NSRunLoop currentRunLoop];
+        [_wifiDetectorRunLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
+        [_wifiDetectorRunLoop run];
+    }
+}
+
+- (NSThread *)startVoiceWaveThread
+{
+    static NSThread *_wifiDetectorThread = nil;
+    static dispatch_once_t oncePredicate;
+    dispatch_once(&oncePredicate, ^{
+        _wifiDetectorThread =
+        [[NSThread alloc] initWithTarget:self
+                                selector:@selector(voiceWaveThreadEntryPoint:)
+                                  object:nil];
+        [_wifiDetectorThread start];
+    });
+    
+    return _wifiDetectorThread;
+}
+
+
+- (NSTimer *)pingTimer
+{
+    if (!_pingTimer) {
+        _pingTimer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(ping) userInfo:nil repeats:YES];
+    }
+    
+    return _pingTimer;
+}
+
+
+-(id)init{
+    if (self = [super init]) {
+        [self startVoiceWaveThread];
+    }
+    
+    return self;
+}
 
 #pragma mark - DLNWiFiDetectorDelegate
 - (void)wifiDetectorSearchOutIP:(NSString *)ip withHost:(NSString *)host {
@@ -106,7 +154,9 @@
             self.baseAddressEnd = and;
         }
     }
-    self.pingTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(ping) userInfo:nil repeats:YES];
+    
+    //self.pingTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(ping) userInfo:nil repeats:YES];
+    [_wifiDetectorRunLoop addTimer:self.pingTimer forMode:NSRunLoopCommonModes];
     
 }
 
@@ -131,7 +181,7 @@
                 [strongSelf.delegate wifiDetectorSearchOutIP:ip withHost:host];
             }
         }
-
+        
         if (strongSelf.timerCount + strongSelf.baseAddressEnd >= 254) {
             if ([strongSelf.delegate respondsToSelector:@selector(wifiDetectorSearchFinished)]) {
                 [strongSelf.delegate wifiDetectorSearchFinished];
@@ -313,7 +363,7 @@
             if(temp_addr->ifa_addr->sa_family == AF_INET) {
                 // Check if interface is en0 which is the wifi connection on the iPhone
                 if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"] || [[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"pdp_ip0"]) {
-//                if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+                    //                if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
                     // Get NSString from C String
                     address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
                     self.netMask = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_netmask)->sin_addr)];

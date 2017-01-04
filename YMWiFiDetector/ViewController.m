@@ -24,8 +24,8 @@ static int num = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _detector = [[YMWiFiDetector alloc] init];
-    
+    _detector = [YMWiFiDetector instance];
+    _detector.delegate = self;
     _activityShow.hidesWhenStopped = YES;
 }
 
@@ -36,13 +36,7 @@ static int num = 0;
 }
 
 - (IBAction)scanIP:(id)sender {
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    
-    dispatch_async(queue, ^{
-        
-        
-        
-    });
+    [_detector startScanning];
     
     [_activityShow startAnimating];
     

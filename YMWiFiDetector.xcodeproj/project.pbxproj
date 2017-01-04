@@ -18,9 +18,6 @@
 		32101F0D1E16694700E5831F /* DLNWiFiDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101F031E16694700E5831F /* DLNWiFiDetector.m */; };
 		32101F0E1E16694700E5831F /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101F0A1E16694700E5831F /* SimplePing.m */; };
 		32101F111E16699D00E5831F /* YMWiFiDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101F101E16699D00E5831F /* YMWiFiDetector.m */; };
-		32DCE2681E1B6A9700FF6AB7 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DCE2651E1B6A9700FF6AB7 /* GCDAsyncSocket.m */; };
-		32DCE2691E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DCE2671E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m */; };
-		32DCE26C1E1B6AA000FF6AB7 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DCE26B1E1B6AA000FF6AB7 /* SocketManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,13 +44,6 @@
 		32101F0A1E16694700E5831F /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		32101F0F1E16699D00E5831F /* YMWiFiDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMWiFiDetector.h; sourceTree = "<group>"; };
 		32101F101E16699D00E5831F /* YMWiFiDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMWiFiDetector.m; sourceTree = "<group>"; };
-		32DCE2631E1B6A9700FF6AB7 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
-		32DCE2641E1B6A9700FF6AB7 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		32DCE2651E1B6A9700FF6AB7 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
-		32DCE2661E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
-		32DCE2671E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		32DCE26A1E1B6AA000FF6AB7 /* SocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
-		32DCE26B1E1B6AA000FF6AB7 /* SocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +60,6 @@
 		32101ED81E16691600E5831F = {
 			isa = PBXGroup;
 			children = (
-				32DCE26A1E1B6AA000FF6AB7 /* SocketManager.h */,
-				32DCE26B1E1B6AA000FF6AB7 /* SocketManager.m */,
-				32DCE2621E1B6A9700FF6AB7 /* GCD */,
 				32101EFE1E16694700E5831F /* DLNlib */,
 				32101EE31E16691600E5831F /* YMWiFiDetector */,
 				32101EE21E16691600E5831F /* Products */,
@@ -137,18 +124,6 @@
 				32101F081E16694700E5831F /* route.h */,
 			);
 			path = headers;
-			sourceTree = "<group>";
-		};
-		32DCE2621E1B6A9700FF6AB7 /* GCD */ = {
-			isa = PBXGroup;
-			children = (
-				32DCE2631E1B6A9700FF6AB7 /* CocoaAsyncSocket.h */,
-				32DCE2641E1B6A9700FF6AB7 /* GCDAsyncSocket.h */,
-				32DCE2651E1B6A9700FF6AB7 /* GCDAsyncSocket.m */,
-				32DCE2661E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.h */,
-				32DCE2671E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m */,
-			);
-			path = GCD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +204,6 @@
 				32101EE91E16691600E5831F /* AppDelegate.m in Sources */,
 				32101F0D1E16694700E5831F /* DLNWiFiDetector.m in Sources */,
 				32101EF21E16691600E5831F /* YMWiFiDetector.xcdatamodeld in Sources */,
-				32DCE26C1E1B6AA000FF6AB7 /* SocketManager.m in Sources */,
-				32DCE2691E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m in Sources */,
-				32DCE2681E1B6A9700FF6AB7 /* GCDAsyncSocket.m in Sources */,
 				32101F0E1E16694700E5831F /* SimplePing.m in Sources */,
 				32101EE61E16691600E5831F /* main.m in Sources */,
 			);
