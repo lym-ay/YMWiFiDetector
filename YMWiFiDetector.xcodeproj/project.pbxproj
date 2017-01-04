@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32101EE61E16691600E5831F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101EE51E16691600E5831F /* main.m */; };
+		32101EE91E16691600E5831F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101EE81E16691600E5831F /* AppDelegate.m */; };
+		32101EEC1E16691600E5831F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101EEB1E16691600E5831F /* ViewController.m */; };
+		32101EEF1E16691600E5831F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32101EED1E16691600E5831F /* Main.storyboard */; };
+		32101EF21E16691600E5831F /* YMWiFiDetector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 32101EF01E16691600E5831F /* YMWiFiDetector.xcdatamodeld */; };
+		32101EF41E16691600E5831F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32101EF31E16691600E5831F /* Assets.xcassets */; };
+		32101EF71E16691600E5831F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32101EF51E16691600E5831F /* LaunchScreen.storyboard */; };
+		32101F0C1E16694700E5831F /* DLNPingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101F011E16694700E5831F /* DLNPingHelper.m */; };
+		32101F0D1E16694700E5831F /* DLNWiFiDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101F031E16694700E5831F /* DLNWiFiDetector.m */; };
+		32101F0E1E16694700E5831F /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101F0A1E16694700E5831F /* SimplePing.m */; };
+		32101F111E16699D00E5831F /* YMWiFiDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 32101F101E16699D00E5831F /* YMWiFiDetector.m */; };
+		32DCE2681E1B6A9700FF6AB7 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DCE2651E1B6A9700FF6AB7 /* GCDAsyncSocket.m */; };
+		32DCE2691E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DCE2671E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m */; };
+		32DCE26C1E1B6AA000FF6AB7 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DCE26B1E1B6AA000FF6AB7 /* SocketManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32101EE11E16691600E5831F /* YMWiFiDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMWiFiDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32101EE51E16691600E5831F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32101EE71E16691600E5831F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		32101EE81E16691600E5831F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		32101EEA1E16691600E5831F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		32101EEB1E16691600E5831F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		32101EEE1E16691600E5831F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		32101EF11E16691600E5831F /* YMWiFiDetector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YMWiFiDetector.xcdatamodel; sourceTree = "<group>"; };
+		32101EF31E16691600E5831F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32101EF61E16691600E5831F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		32101EF81E16691600E5831F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32101F001E16694700E5831F /* DLNPingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNPingHelper.h; sourceTree = "<group>"; };
+		32101F011E16694700E5831F /* DLNPingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNPingHelper.m; sourceTree = "<group>"; };
+		32101F021E16694700E5831F /* DLNWiFiDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLNWiFiDetector.h; sourceTree = "<group>"; };
+		32101F031E16694700E5831F /* DLNWiFiDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLNWiFiDetector.m; sourceTree = "<group>"; };
+		32101F051E16694700E5831F /* if_arp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_arp.h; sourceTree = "<group>"; };
+		32101F061E16694700E5831F /* if_ether.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
+		32101F071E16694700E5831F /* if_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_types.h; sourceTree = "<group>"; };
+		32101F081E16694700E5831F /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		32101F091E16694700E5831F /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		32101F0A1E16694700E5831F /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		32101F0F1E16699D00E5831F /* YMWiFiDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMWiFiDetector.h; sourceTree = "<group>"; };
+		32101F101E16699D00E5831F /* YMWiFiDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMWiFiDetector.m; sourceTree = "<group>"; };
+		32DCE2631E1B6A9700FF6AB7 /* CocoaAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaAsyncSocket.h; sourceTree = "<group>"; };
+		32DCE2641E1B6A9700FF6AB7 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		32DCE2651E1B6A9700FF6AB7 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		32DCE2661E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		32DCE2671E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		32DCE26A1E1B6AA000FF6AB7 /* SocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
+		32DCE26B1E1B6AA000FF6AB7 /* SocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32101EDE1E16691600E5831F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32101ED81E16691600E5831F = {
+			isa = PBXGroup;
+			children = (
+				32DCE26A1E1B6AA000FF6AB7 /* SocketManager.h */,
+				32DCE26B1E1B6AA000FF6AB7 /* SocketManager.m */,
+				32DCE2621E1B6A9700FF6AB7 /* GCD */,
+				32101EFE1E16694700E5831F /* DLNlib */,
+				32101EE31E16691600E5831F /* YMWiFiDetector */,
+				32101EE21E16691600E5831F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32101EE21E16691600E5831F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32101EE11E16691600E5831F /* YMWiFiDetector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32101EE31E16691600E5831F /* YMWiFiDetector */ = {
+			isa = PBXGroup;
+			children = (
+				32101EE71E16691600E5831F /* AppDelegate.h */,
+				32101EE81E16691600E5831F /* AppDelegate.m */,
+				32101EEA1E16691600E5831F /* ViewController.h */,
+				32101EEB1E16691600E5831F /* ViewController.m */,
+				32101EED1E16691600E5831F /* Main.storyboard */,
+				32101EF31E16691600E5831F /* Assets.xcassets */,
+				32101EF51E16691600E5831F /* LaunchScreen.storyboard */,
+				32101EF81E16691600E5831F /* Info.plist */,
+				32101EF01E16691600E5831F /* YMWiFiDetector.xcdatamodeld */,
+				32101EE41E16691600E5831F /* Supporting Files */,
+				32101F0F1E16699D00E5831F /* YMWiFiDetector.h */,
+				32101F101E16699D00E5831F /* YMWiFiDetector.m */,
+			);
+			path = YMWiFiDetector;
+			sourceTree = "<group>";
+		};
+		32101EE41E16691600E5831F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32101EE51E16691600E5831F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		32101EFE1E16694700E5831F /* DLNlib */ = {
+			isa = PBXGroup;
+			children = (
+				32101F001E16694700E5831F /* DLNPingHelper.h */,
+				32101F011E16694700E5831F /* DLNPingHelper.m */,
+				32101F021E16694700E5831F /* DLNWiFiDetector.h */,
+				32101F031E16694700E5831F /* DLNWiFiDetector.m */,
+				32101F041E16694700E5831F /* headers */,
+				32101F091E16694700E5831F /* SimplePing.h */,
+				32101F0A1E16694700E5831F /* SimplePing.m */,
+			);
+			path = DLNlib;
+			sourceTree = "<group>";
+		};
+		32101F041E16694700E5831F /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				32101F051E16694700E5831F /* if_arp.h */,
+				32101F061E16694700E5831F /* if_ether.h */,
+				32101F071E16694700E5831F /* if_types.h */,
+				32101F081E16694700E5831F /* route.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+		32DCE2621E1B6A9700FF6AB7 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				32DCE2631E1B6A9700FF6AB7 /* CocoaAsyncSocket.h */,
+				32DCE2641E1B6A9700FF6AB7 /* GCDAsyncSocket.h */,
+				32DCE2651E1B6A9700FF6AB7 /* GCDAsyncSocket.m */,
+				32DCE2661E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.h */,
+				32DCE2671E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32101EE01E16691600E5831F /* YMWiFiDetector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32101EFB1E16691600E5831F /* Build configuration list for PBXNativeTarget "YMWiFiDetector" */;
+			buildPhases = (
+				32101EDD1E16691600E5831F /* Sources */,
+				32101EDE1E16691600E5831F /* Frameworks */,
+				32101EDF1E16691600E5831F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YMWiFiDetector;
+			productName = YMWiFiDetector;
+			productReference = 32101EE11E16691600E5831F /* YMWiFiDetector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32101ED91E16691600E5831F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = s3graphics;
+				TargetAttributes = {
+					32101EE01E16691600E5831F = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = RN8YKV5B34;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 32101EDC1E16691600E5831F /* Build configuration list for PBXProject "YMWiFiDetector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32101ED81E16691600E5831F;
+			productRefGroup = 32101EE21E16691600E5831F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32101EE01E16691600E5831F /* YMWiFiDetector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32101EDF1E16691600E5831F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32101EF71E16691600E5831F /* LaunchScreen.storyboard in Resources */,
+				32101EF41E16691600E5831F /* Assets.xcassets in Resources */,
+				32101EEF1E16691600E5831F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32101EDD1E16691600E5831F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32101EEC1E16691600E5831F /* ViewController.m in Sources */,
+				32101F0C1E16694700E5831F /* DLNPingHelper.m in Sources */,
+				32101F111E16699D00E5831F /* YMWiFiDetector.m in Sources */,
+				32101EE91E16691600E5831F /* AppDelegate.m in Sources */,
+				32101F0D1E16694700E5831F /* DLNWiFiDetector.m in Sources */,
+				32101EF21E16691600E5831F /* YMWiFiDetector.xcdatamodeld in Sources */,
+				32DCE26C1E1B6AA000FF6AB7 /* SocketManager.m in Sources */,
+				32DCE2691E1B6A9700FF6AB7 /* GCDAsyncUdpSocket.m in Sources */,
+				32DCE2681E1B6A9700FF6AB7 /* GCDAsyncSocket.m in Sources */,
+				32101F0E1E16694700E5831F /* SimplePing.m in Sources */,
+				32101EE61E16691600E5831F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		32101EED1E16691600E5831F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32101EEE1E16691600E5831F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		32101EF51E16691600E5831F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32101EF61E16691600E5831F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32101EF91E16691600E5831F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		32101EFA1E16691600E5831F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32101EFC1E16691600E5831F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RN8YKV5B34;
+				INFOPLIST_FILE = YMWiFiDetector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.s3graphics.olavoice.YMWiFiDetector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		32101EFD1E16691600E5831F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RN8YKV5B34;
+				INFOPLIST_FILE = YMWiFiDetector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.s3graphics.olavoice.YMWiFiDetector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32101EDC1E16691600E5831F /* Build configuration list for PBXProject "YMWiFiDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32101EF91E16691600E5831F /* Debug */,
+				32101EFA1E16691600E5831F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32101EFB1E16691600E5831F /* Build configuration list for PBXNativeTarget "YMWiFiDetector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32101EFC1E16691600E5831F /* Debug */,
+				32101EFD1E16691600E5831F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		32101EF01E16691600E5831F /* YMWiFiDetector.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				32101EF11E16691600E5831F /* YMWiFiDetector.xcdatamodel */,
+			);
+			currentVersion = 32101EF11E16691600E5831F /* YMWiFiDetector.xcdatamodel */;
+			path = YMWiFiDetector.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 32101ED91E16691600E5831F /* Project object */;
+}
